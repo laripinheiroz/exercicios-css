@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Sarala', sans-serif;
+  color: #F2E3D0;
+  background: linear-gradient(180deg, #010D00 0%, #262526 100%);
+  overflow-x: hidden;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 80px;
+  background-color: #010D00;
+  border-bottom: 2px solid #BFA27E;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.navegacao {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-end;
+}
+
+.link-nav {
+  color: #F2E3D0;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.link-nav:hover {
+  color: #BFA27E;
+}
+
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  background: linear-gradient(135deg, #262526 0%, #59192A 100%);
+  flex-wrap: wrap;
+}
+
+.texto-inicio {
+  max-width: 500px;
+  flex: 1 1 400px;
+}
+
+.titulo-principal {
+  font-family: 'Righteous', cursive;
+  font-size: 64px;
+  color: #BFA27E;
+  margin-bottom: 16px;
+}
+
+.subtitulo {
+  font-family: 'Sarala', sans-serif;
+  font-size: 22px;
+  color: #F2E3D0;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  font-size: 18px;
+  color: #F2E3D0;
+  margin-bottom: 32px;
+}
+
+.botao-principal {
+  background-color: #BFA27E;
+  color: #010D00;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botao-principal:hover {
+  background-color: #F2E3D0;
+  color: #59192A;
+}
+
+.imagem-inicio {
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: block;
+}
+
+.secao {
+  padding: 80px;
+  text-align: center;
+  background-color: #262526;
+  border-top: 1px solid #59192A;
+}
+
+.titulo-secao {
+  font-family: 'Righteous', cursive;
+  font-size: 36px;
+  color: #BFA27E;
+  margin-bottom: 24px;
+}
+
+.texto-secao,
+.lista-beneficios li,
+.lista-comandos li {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  color: #F2E3D0;
+  margin-bottom: 12px;
+}
+
+.lista-passos {
+  list-style: none;             
+  counter-reset: item;          
+  padding-left: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.lista-passos li {
+  counter-increment: item;      
+  font-size: 18px;
+  color: #F2E3D0;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 36px;           
+}
+
+.lista-passos li::before {
+  content: counter(item) ". ";  
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #BFA27E;               
+  font-weight: bold;
+}
+
+.rodape {
+  background-color: #010D00;
+  text-align: center;
+  padding: 40px;
+  border-top: 2px solid #BFA27E;
+}
+
+.logo-rodape {
+  width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.texto-rodape {
+  font-size: 14px;
+  color: #F2E3D0;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .inicio {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .texto-inicio {
+    max-width: 100%;
+  }
+
+  .imagem-inicio {
+    width: 350px;
+    margin: 30px auto 0;
+  }
+
+  .cabecalho {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .navegacao {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-principal {
+    font-size: 42px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .descricao {
+    font-size: 16px;
+  }
+
+  .imagem-inicio {
+    width: 280px;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  .secao {
+    padding: 40px 20px;
+  }
+
+  .cabecalho {
+    padding: 16px;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+  .lista-passos {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .lista-passos li {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .botao-principal {
+    margin: 0 auto; 
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 24px;
+  }
+
+  .botao-principal i {
+    font-size: 22px;
+  }
+}
